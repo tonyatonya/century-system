@@ -188,77 +188,15 @@ h2 {
   position: relative;
 }
 
-.row {
-  margin: 0;
-}
-
-.welcometext {
-  text-align: center;
-  width: 100%;
-  color: white;
-  margin-top: 200px;
-}
-
-.welcometext:after {
-  content: "";
-  display: block;
-  visibility: hidden;
-  clear: both;
-  width: 100%;
-}
-
-.panel {
-  background: none;
-  padding: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  float: none !important;
-  border-radius: 5px;
-  overflow: hidden;
-  background: #c9c9c9;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c9c9c9), color-stop(100%, #575757));
-  background: -webkit-linear-gradient(top, #c9c9c9 0%, #575757 100%);
-  background: -webkit-gradient(linear, top left, bottom left, from(#c9c9c9), to(#575757));
-  background: linear-gradient(to bottom, #c9c9c9 0%, #575757 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c9c9c9', endColorstr='#575757',GradientType=0 );
-}
-
-.panel:after {
-  content: "";
-  display: block;
-  visibility: hidden;
-  clear: both;
-  width: 100%;
-}
-
-.panel * {
-  display: block;
-  text-align: center;
-  margin-top: 20px;
-}
-
-.panel input {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.panel button {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.panel.login {
-  width: 300px;
-  min-height: 200px;
-  margin-top: 30px;
-}
-
 .headermenu {
   height: 50px;
   width: 100%;
+  /*
   position: absolute;
-  top: 30px;
+  	top:30px;
+  */
+  position: relative;
+  margin-top: 30px;
 }
 
 .headermenu .empname {
@@ -327,6 +265,78 @@ h2 {
 
 .footmenu ul li:last-child {
   border-right: none;
+}
+
+.row {
+  margin: 0;
+}
+
+.welcometext {
+  text-align: center;
+  width: 100%;
+  color: white;
+  margin-top: 200px;
+}
+
+.welcometext:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  clear: both;
+  width: 100%;
+}
+
+.panel {
+  background: none;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  float: none !important;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #c9c9c9;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c9c9c9), color-stop(100%, #575757));
+  background: -webkit-linear-gradient(top, #c9c9c9 0%, #575757 100%);
+  background: -webkit-gradient(linear, top left, bottom left, from(#c9c9c9), to(#575757));
+  background: linear-gradient(to bottom, #c9c9c9 0%, #575757 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c9c9c9', endColorstr='#575757',GradientType=0 );
+}
+
+.panel:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  clear: both;
+  width: 100%;
+}
+
+.panel * {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.panel input {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.panel button {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.panel.login {
+  width: 300px;
+  min-height: 200px;
+  margin-top: 30px;
+}
+
+.mainpanel {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*******input style*******/

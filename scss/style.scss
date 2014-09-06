@@ -23,6 +23,18 @@
 
 }
 
+@mixin grayLeft{
+	background: #c9c9c9; /* Old browsers */
+	background: -moz-linear-gradient(top,  #c9c9c9 0%, #575757 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c9c9c9), color-stop(100%,#575757)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #c9c9c9 0%,#575757 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #c9c9c9 0%,#575757 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #c9c9c9 0%,#575757 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #c9c9c9 0%,#575757 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9c9c9', endColorstr='#575757',GradientType=0 ); /* IE6-9 */
+
+}
+
 @mixin gold{
 	background: #ddcb9f;
 	background: -moz-linear-gradient(top,  #ddcb9f 0%, #e9ca1b 52%, #b26b28 100%);
@@ -95,41 +107,17 @@ h2{font-size: 2em;}
 	margin-right: auto;
 	position: relative;
 }
-.row{
-	margin: 0;
-}
-.welcometext{
-	text-align: center;
-	width: 100%;
-	color: white;
-	@include clearfix;
-	margin-top: 200px;
-}
-.panel{
-	background: none;
-	padding: 10px;
-	margin-left: auto;
-	margin-right: auto;
-	float: none !important;
 
-	@include radius;
-	@include grayPanel;
-	@include clearfix;
-	*{display: block; text-align: center; margin-top: 20px;} 
-	input{width: 80%; margin-left: auto; margin-right: auto;}
-	button{margin-left: auto;margin-right: auto;}
-}
 
-.panel.login{
-	width: 300px;
-	min-height: 200px;
-	margin-top: 30px;
-}
 .headermenu{
 	height: 50px;
 	width: 100%;
-	position: absolute;
+	/*
+position: absolute;
 	top:30px;
+*/
+	position:relative;
+	margin-top: 30px;
 	.empname{
 		color: white;
 		display: inline;
@@ -180,6 +168,50 @@ h2{font-size: 2em;}
 		}
 	}
 }
+
+
+.row{
+	margin: 0;
+}
+.welcometext{
+	text-align: center;
+	width: 100%;
+	color: white;
+	@include clearfix;
+	margin-top: 200px;
+}
+
+.panel{
+	background: none;
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	float: none !important;
+
+	@include radius;
+	@include grayPanel;
+	@include clearfix;
+	*{display: block; text-align: center; margin-top: 20px;} 
+	input{width: 80%; margin-left: auto; margin-right: auto;}
+	button{margin-left: auto;margin-right: auto;}
+}
+
+.panel.login{
+	width: 300px;
+	min-height: 200px;
+	margin-top: 30px;
+}
+
+.mainpanel{
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;	
+}
+
+.movie .mainpanel{
+	
+}
+
 
 /*******input style*******/
 .btn-primary{
