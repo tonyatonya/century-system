@@ -9,7 +9,7 @@ $(function(){
 		 
 		panel.css({
 			//'position' : 'absolute',
-			'top' : (winH - panelH) /2,
+			//'top' : (winH - panelH) /2,
 			//'left': (winW - panelW) /2
 			
 		})

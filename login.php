@@ -8,7 +8,7 @@
 	<meta name="robots" content="" />
 	<?php require('inc_header.php'); ?>
 </head>
-<body>
+<body class="page-login">
 <div class="container">
 	<div class="row welcometext">
 		<div class="col-md-12">

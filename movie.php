@@ -17,7 +17,14 @@
 </div>
 <div class="mainpanel">
 	<div class="panel panel-1"></div>
-	<div class="panel panel-2"></div>
+	<div class="panel panel-2">
+		<div class="panel-title">ชื่อภาพยนตร์</div>
+		<div class="movie-list">
+			<ul>
+			<li><a href="#"></a></li>
+		</ul>
+		</div>
+	</div>
 	<div class="panel panel-3"></div>
 </div>
 <?php include('footmenu.php') ?>

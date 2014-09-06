@@ -82,13 +82,44 @@
 }
 
 
-/***********font**********/
+$darkgray:#333333;
+
+/*********** font face **********/
+@font-face {
+    font-family: 'thaisans_neueregular';
+    src: url('thaisansneue-regular-webfont.eot');
+    src: url('thaisansneue-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('thaisansneue-regular-webfont.woff') format('woff'),
+         url('thaisansneue-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'thaisans_neuebold';
+    src: url('thaisansneue-bold-webfont.eot');
+    src: url('thaisansneue-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('thaisansneue-bold-webfont.woff') format('woff'),
+         url('thaisansneue-bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/********************************/
+
+
+
 html{@include mainbgColor;}
 body{
 	height: 100%;
 	width: 100%;
 	min-width: 1024px;
 	min-height: 768px;
+	font-family: 'thaisans_neueregular';
 	font-size: 100%;
 	background: none;
 	@include bg;
@@ -187,6 +218,7 @@ position: absolute;
 	margin-left: auto;
 	margin-right: auto;
 	float: none !important;
+	border: none !important;
 
 	@include radius;
 	@include grayPanel;
@@ -195,12 +227,18 @@ position: absolute;
 	input{width: 80%; margin-left: auto; margin-right: auto;}
 	button{margin-left: auto;margin-right: auto;}
 }
-
+.page-login .login{
+	width: 300px;
+	min-height: 200px;
+	margin-top: 30px;
+}
+/*
 .panel.login{
 	width: 300px;
 	min-height: 200px;
 	margin-top: 30px;
 }
+*/
 
 .mainpanel{
 	position: relative;
@@ -209,7 +247,47 @@ position: absolute;
 }
 
 .movie .mainpanel{
-	
+	width: 904px;
+	height: 592px;
+	position: relative;	
+}
+.movie .panel-1{
+	width: 512px;
+	height: 346px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin: 0 !important;
+}
+.movie .panel-2{
+	width: 380px;
+	height: 592px;
+	position: absolute;
+	top:0;
+	right: 0;
+	background : url(../images/panel02.png) no-repeat center top;
+	.movie-list{
+		width: 355px;
+		height: 442px;
+		background: url(../images/movie-list.png) center top no-repeat;
+		margin-left: auto;
+		margin-right: auto;
+		ul{
+			li{
+				list-style: none;
+				text-align: left;
+			}
+		}
+	}
+}
+.movie .panel-3{
+	width: 512px;
+	height: 231px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	margin: 0 !important;
+	background: url(../images/panel01.png) no-repeat center top;
 }
 
 
