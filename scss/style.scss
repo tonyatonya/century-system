@@ -184,6 +184,7 @@ position: absolute;
 				line-height: 60px;
 				text-align: center;
 				color: black;
+				font-size: 1.5em;
 				&:hover{
 					text-decoration: none;
 					color: white;
@@ -223,22 +224,20 @@ position: absolute;
 	@include radius;
 	@include grayPanel;
 	@include clearfix;
-	*{display: block; text-align: center; margin-top: 20px;} 
-	input{width: 80%; margin-left: auto; margin-right: auto;}
-	button{margin-left: auto;margin-right: auto;}
+	input,button{display: block; text-align: center; margin-top: 20px; margin-left: auto;margin-right: auto;} 
+	input{width: 80%;}
+	/* button{margin-left: auto;margin-right: auto;} */
+}
+.panel-title{
+	font-size: 1.8em;
+	margin-bottom: 10px;		
 }
 .page-login .login{
 	width: 300px;
 	min-height: 200px;
 	margin-top: 30px;
 }
-/*
-.panel.login{
-	width: 300px;
-	min-height: 200px;
-	margin-top: 30px;
-}
-*/
+
 
 .mainpanel{
 	position: relative;
@@ -258,7 +257,47 @@ position: absolute;
 	left: 0;
 	top: 0;
 	margin: 0 !important;
+	.movie-box{
+		margin-left: auto;
+		margin-right: auto;
+		width: 488px;
+		height: 231px;
+		overflow: hidden;
+		display: block;
+		background:url(../images/movieBG.jpg) left top no-repeat;
+		.poster{
+			width: 188px;
+			height: 231px;
+			display: inline;
+			float: right;
+			img{
+				width: 188px;
+				height: 231px;
+				-moz-transform: scaleY(-1);
+				-o-transform: scaleY(-1);
+				-webkit-transform: scaleY(-1);
+				transform: scaleY(-1);
+				filter: FlipH;
+				-ms-filter: "FlipH";
+			}
+		}
+	}
+	.movie-name{
+		background-color: black;
+		margin-top: 15px;
+		width: 488px;
+		height: 65px;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		transform: rotate(180deg);
+		color: white;
+		line-height: 50px;
+		font-size: 2.5em;
+		padding: 10px;
+	}
 }
+
 .movie .panel-2{
 	width: 380px;
 	height: 592px;
@@ -266,17 +305,79 @@ position: absolute;
 	top:0;
 	right: 0;
 	background : url(../images/panel02.png) no-repeat center top;
+	
 	.movie-list{
 		width: 355px;
 		height: 442px;
-		background: url(../images/movie-list.png) center top no-repeat;
+		background: url(../images/movie-list.png) center top repeat-y;
 		margin-left: auto;
 		margin-right: auto;
-		ul{
+		overflow: hidden;
+		ul{	
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
 			li{
 				list-style: none;
 				text-align: left;
+				width: 100%;
+				height: 35px;
+				margin-top:2px;
+				font-size: 1.5em;
+				line-height: 50%;
+				&:first-child{
+					margin-top:0 ;
+				}
+				&:hover{
+					background-color: white;
+				}
+				a{
+					text-decoration: none;
+					display: block;
+					height: 100%;
+					padding: 10px;
+					color: white;
+					&:hover{
+						color: black;
+					}
+				}
 			}
+		}
+	}
+	
+	.movie-detail{
+		width: 100%;
+		height: 72px;
+		position: relative;
+		margin-top: 10px;
+		>div{
+			position: absolute;
+			font-size: 1.5em;
+			font-weight: bold;
+			color: $darkgray;
+			span{
+				font-weight: normal;
+			}
+		}
+		.movie-type{
+			left: 0;
+			top:0;
+			text-align: left;
+			width: 50%;
+			
+		}
+		.movie-author{
+			right: 0;
+			top:0;
+			text-align: right;
+			width: 50%;
+			
+		}
+		.movie-duration{
+			left: 0;
+			bottom: 0;
+			text-align: left;
+			width: 100%;
 		}
 	}
 }
@@ -288,9 +389,100 @@ position: absolute;
 	bottom: 0;
 	margin: 0 !important;
 	background: url(../images/panel01.png) no-repeat center top;
+	.date-time{
+		position: absolute;
+		right: 10px;
+		top:10px;
+		color: yellow;
+		font-size: 1.8em;
+	}
+	.time-list{
+		width: 100%;
+		padding: 5px;
+		padding-top: 15px;
+		height: 152px;
+		background-color:black;
+		color: white;
+		column-width:150px;
+		ul{
+			li{
+				font-size: 1.5em;
+				width: 150px;
+				text-indent: 10px;
+				margin-top: 5px;
+				&:hover{
+					background-color: white;
+					a{
+						color: black;
+					}
+				}
+				a{
+					color: white;
+					text-decoration: none;
+					display: block;
+				}
+			}
+		}
+	}
+	
 }
 
-
+.theater{
+	.mainpanel{
+		width: 977px;
+	}
+	.theater-panel{
+		position: relative;
+		width: 237px;
+		height: 230px;
+		display: inline;
+		float: left;
+		background: url(../images/theatre_panel.png) no-repeat center center;
+		margin-top: 7px;
+		margin-bottom: 7px;
+		&:nth-child(even){
+			margin-left: 7px;
+			margin-right: 7px;
+		}
+		.theater-num{
+			position: absolute;
+			left: 5px;
+			top: 10px;
+			font-size: 1.6em;
+			span{
+				color: yellow;
+			}
+		}
+		.theater-movie{
+			background-color: black;
+			width: 227px;
+			height: 179px;
+			overflow: auto;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 45px;
+			ul{
+				li{
+					width: 100%;
+					padding: 3px;
+					&:hover{
+						background-color: white;
+						a{
+							color: black;
+							
+						}
+					}
+					a{
+						text-decoration: none;
+						font-size: 1.1em;
+						color: white;
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}
 /*******input style*******/
 .btn-primary{
 	background : none;

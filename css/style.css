@@ -265,6 +265,7 @@ h2 {
   line-height: 60px;
   text-align: center;
   color: black;
+  font-size: 1.5em;
 }
 
 .footmenu ul li a:hover {
@@ -330,21 +331,22 @@ h2 {
   width: 100%;
 }
 
-.panel * {
+.panel input,
+.panel button {
   display: block;
   text-align: center;
   margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .panel input {
   width: 80%;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-.panel button {
-  margin-left: auto;
-  margin-right: auto;
+.panel-title {
+  font-size: 1.8em;
+  margin-bottom: 10px;
 }
 
 .page-login .login {
@@ -374,6 +376,51 @@ h2 {
   margin: 0 !important;
 }
 
+.movie .panel-1 .movie-box {
+  margin-left: auto;
+  margin-right: auto;
+  width: 488px;
+  height: 231px;
+  overflow: hidden;
+  display: block;
+  background: url(../images/movieBG.jpg) left top no-repeat;
+}
+
+.movie .panel-1 .movie-box .poster {
+  width: 188px;
+  height: 231px;
+  display: inline;
+  float: right;
+}
+
+.movie .panel-1 .movie-box .poster img {
+  width: 188px;
+  height: 231px;
+  -webkit-transform: scaleY(-1);
+  -ms-transform: scaleY(-1);
+  transform: scaleY(-1);
+  -webkit-filter: FlipH;
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+.movie .panel-1 .movie-name {
+  background-color: black;
+  margin-top: 15px;
+  width: 488px;
+  height: 65px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  color: white;
+  line-height: 50px;
+  font-size: 2.5em;
+  padding: 10px;
+}
+
 .movie .panel-2 {
   width: 380px;
   height: 592px;
@@ -386,7 +433,14 @@ h2 {
 .movie .panel-2 .movie-list {
   width: 355px;
   height: 442px;
-  background: url(../images/movie-list.png) center top no-repeat;
+  background: url(../images/movie-list.png) center top repeat-y;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+.movie .panel-2 .movie-list ul {
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -394,6 +448,70 @@ h2 {
 .movie .panel-2 .movie-list ul li {
   list-style: none;
   text-align: left;
+  width: 100%;
+  height: 35px;
+  margin-top: 2px;
+  font-size: 1.5em;
+  line-height: 50%;
+}
+
+.movie .panel-2 .movie-list ul li:first-child {
+  margin-top: 0;
+}
+
+.movie .panel-2 .movie-list ul li:hover {
+  background-color: white;
+}
+
+.movie .panel-2 .movie-list ul li a {
+  text-decoration: none;
+  display: block;
+  height: 100%;
+  padding: 10px;
+  color: white;
+}
+
+.movie .panel-2 .movie-list ul li a:hover {
+  color: black;
+}
+
+.movie .panel-2 .movie-detail {
+  width: 100%;
+  height: 72px;
+  position: relative;
+  margin-top: 10px;
+}
+
+.movie .panel-2 .movie-detail > div {
+  position: absolute;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333333;
+}
+
+.movie .panel-2 .movie-detail > div span {
+  font-weight: normal;
+}
+
+.movie .panel-2 .movie-detail .movie-type {
+  left: 0;
+  top: 0;
+  text-align: left;
+  width: 50%;
+}
+
+.movie .panel-2 .movie-detail .movie-author {
+  right: 0;
+  top: 0;
+  text-align: right;
+  width: 50%;
+}
+
+.movie .panel-2 .movie-detail .movie-duration {
+  left: 0;
+  bottom: 0;
+  text-align: left;
+  width: 100%;
 }
 
 .movie .panel-3 {
@@ -404,6 +522,108 @@ h2 {
   bottom: 0;
   margin: 0 !important;
   background: url(../images/panel01.png) no-repeat center top;
+}
+
+.movie .panel-3 .date-time {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: yellow;
+  font-size: 1.8em;
+}
+
+.movie .panel-3 .time-list {
+  width: 100%;
+  padding: 5px;
+  padding-top: 15px;
+  height: 152px;
+  background-color: black;
+  color: white;
+  -webkit-column-width: 150px;
+  -moz-column-width: 150px;
+  column-width: 150px;
+}
+
+.movie .panel-3 .time-list ul li {
+  font-size: 1.5em;
+  width: 150px;
+  text-indent: 10px;
+  margin-top: 5px;
+}
+
+.movie .panel-3 .time-list ul li:hover {
+  background-color: white;
+}
+
+.movie .panel-3 .time-list ul li:hover a {
+  color: black;
+}
+
+.movie .panel-3 .time-list ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.theater .mainpanel {
+  width: 977px;
+}
+
+.theater .theater-panel {
+  position: relative;
+  width: 237px;
+  height: 230px;
+  display: inline;
+  float: left;
+  background: url(../images/theatre_panel.png) no-repeat center center;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+.theater .theater-panel:nth-child(even) {
+  margin-left: 7px;
+  margin-right: 7px;
+}
+
+.theater .theater-panel .theater-num {
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  font-size: 1.6em;
+}
+
+.theater .theater-panel .theater-num span {
+  color: yellow;
+}
+
+.theater .theater-panel .theater-movie {
+  background-color: black;
+  width: 227px;
+  height: 179px;
+  overflow: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 45px;
+}
+
+.theater .theater-panel .theater-movie ul li {
+  width: 100%;
+  padding: 3px;
+}
+
+.theater .theater-panel .theater-movie ul li:hover {
+  background-color: white;
+}
+
+.theater .theater-panel .theater-movie ul li:hover a {
+  color: black;
+}
+
+.theater .theater-panel .theater-movie ul li a {
+  text-decoration: none;
+  font-size: 1.1em;
+  color: white;
+  display: block;
 }
 
 /*******input style*******/
