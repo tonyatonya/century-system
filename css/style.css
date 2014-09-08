@@ -178,12 +178,15 @@ body {
   font-family: 'thaisans_neueregular';
   font-size: 100%;
   background: none;
+}
+
+.nologo {
   background-image: url(../images/imgBg.png);
   background-position: center center;
   background-repeat: no-repeat;
 }
 
-body.withlogo {
+.withlogo {
   background-image: url(../images/imgBg_logo.png);
   background-position: center center;
   background-repeat: no-repeat;
@@ -195,6 +198,10 @@ h1 {
 
 h2 {
   font-size: 2em;
+}
+
+.btn {
+  min-width: 100px;
 }
 
 .container {
@@ -334,7 +341,6 @@ h2 {
 .panel input,
 .panel button {
   display: block;
-  text-align: center;
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
@@ -626,11 +632,622 @@ h2 {
   display: block;
 }
 
+.reserve-check .mainpanel {
+  width: 1024px;
+  position: relative;
+}
+
+.reserve-check .mainpanel .panel {
+  width: 278px;
+  height: 196px;
+  background: url(../images/reservecheck-panel.png) no-repeat center top;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -10%;
+  margin-top: -10%;
+}
+
+.member-check .panel {
+  width: 620px;
+  height: 437px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -25%;
+  margin-top: 30px;
+  background: url(../images/member-panel.png) no-repeat center top;
+}
+
+.member-check .panel .panel-title {
+  width: 100%;
+  text-align: center;
+}
+
+.member-check .panel table {
+  width: 380px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.member-check .panel table th {
+  width: 120px;
+  padding-right: 10px;
+  font-size: 1.2em;
+  color: blue;
+  text-align: right;
+  padding-top: 10px;
+}
+
+.member-check .panel table td {
+  padding-top: 10px;
+}
+
+.member-check .panel table td input,
+.member-check .panel table td textarea {
+  margin: 0 !important;
+  width: 100%;
+}
+
+.member-check .panel table td textarea {
+  height: 100px;
+  border: none;
+}
+
+.theatre-plan .right-col {
+  width: 251px;
+  position: relative;
+  display: inline;
+  float: right;
+}
+
+.theatre-plan .right-col .num {
+  width: 100%;
+  height: 115px;
+  background: url(../images/theatrenum_bg.jpg) no-repeat right top;
+  text-align: right;
+  padding-right: 30px;
+  color: yellow;
+  font-size: 7em;
+  font-family: 'thaisans_neuebold';
+  overflow: hidden;
+}
+
+.theatre-plan .right-col .theatre-detail {
+  background: #71369e;
+  /* Old browsers */
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #71369e), color-stop(100%, #4a1d61));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, #71369e 0%, #4a1d61 100%);
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+  background: -webkit-gradient(linear, top left, top right, from(#71369e), to(#4a1d61));
+  background: linear-gradient(to right, #71369e 0%, #4a1d61 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#71369e', endColorstr='#4a1d61',GradientType=1 );
+  /* IE6-9 */
+  width: 100%;
+  height: 275px;
+  padding: 10px;
+  color: white;
+  font-size: 1.5em;
+}
+
+.theatre-plan .right-col .theatre-detail > div {
+  margin-top: 10px;
+}
+
+.theatre-plan .right-col .theatre-detail .time {
+  width: 100%;
+  height: 70px;
+}
+
+.theatre-plan .right-col .theatre-detail .time * {
+  display: inline-block;
+  text-align: left;
+}
+
+.theatre-plan .right-col .theatre-detail .time .box {
+  width: 170px;
+  height: 70px;
+  float: right;
+  background-color: black;
+  border-radius: 5px;
+  overflow: hidden;
+  overflow: hidden;
+  text-align: center;
+  color: yellow;
+  line-height: 90%;
+  font-size: 3em;
+}
+
+.theatre-plan .right-col .theatre-detail .mov-name {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.theatre-plan .right-col .theatre-detail .mov-name span {
+  color: gray;
+}
+
+.theatre-plan .right-col .theatre-detail .seat-num {
+  width: 100%;
+  line-height: 40px;
+}
+
+.theatre-plan .right-col .theatre-detail .seat-num .box {
+  border-radius: 5px;
+  overflow: hidden;
+  width: 115px;
+  height: 40px;
+  text-align: center;
+  color: yellow;
+  font-size: 2em;
+  line-height: 80%;
+  display: inline;
+  float: right;
+}
+
+.theatre-plan .right-col .theatre-detail .amount {
+  width: 100%;
+  line-height: 40px;
+}
+
+.theatre-plan .right-col .theatre-detail .amount .box {
+  border-radius: 5px;
+  overflow: hidden;
+  width: 115px;
+  height: 40px;
+  text-align: center;
+  color: yellow;
+  font-size: 2em;
+  line-height: 80%;
+  display: inline;
+  float: right;
+}
+
+.theatre-plan .right-col .showtime {
+  width: 100%;
+  height: 378px;
+  background: #4a1d61;
+  /* Old browsers */
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4a1d61), color-stop(100%, #71369e));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #4a1d61 0%, #71369e 100%);
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+  background: -webkit-gradient(linear, top left, bottom left, from(#4a1d61), to(#71369e));
+  background: linear-gradient(to bottom, #4a1d61 0%, #71369e 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4a1d61', endColorstr='#71369e',GradientType=0 );
+  /* IE6-9 */
+  position: relative;
+}
+
+.theatre-plan .right-col .showtime .time-list {
+  width: 100%;
+  height: 300px;
+  overflow: auto;
+  padding-top: 10px;
+}
+
+.theatre-plan .right-col .showtime .time-list ul li {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.5em;
+  margin-top: 3px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.theatre-plan .right-col .showtime .time-list ul li:hover {
+  background-color: white;
+}
+
+.theatre-plan .right-col .showtime .time-list ul li:hover a {
+  color: black;
+  text-decoration: none;
+}
+
+.theatre-plan .right-col .showtime .time-list ul li a {
+  color: white;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.theatre-plan .right-col .showtime .time-list ul li a div {
+  display: inline;
+  float: right;
+  text-align: left;
+  width: 60px;
+}
+
+.theatre-plan .right-col .showtime button {
+  width: 190px;
+  height: 60px;
+  border: 0;
+  margin-top: 10px;
+  float: none;
+  margin-left: 30px;
+  background: url(../images/cashingbtn.png) no-repeat;
+  background-position: 0 0;
+}
+
+.theatre-plan .right-col .showtime button:hover {
+  background-position: 0px -60px;
+}
+
+.theatre-plan .right-col .payment {
+  width: 100%;
+  height: 378px;
+  padding: 10px;
+  background: #c9c9c9;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #575757), color-stop(100%, #c9c9c9));
+  background: -webkit-linear-gradient(top, #575757 0%, #c9c9c9 100%);
+  background: -webkit-gradient(linear, top left, bottom left, from(#575757), to(#c9c9c9));
+  background: linear-gradient(to bottom, #575757 0%, #c9c9c9 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#575757', endColorstr='#c9c9c9',GradientType=0 );
+}
+
+.theatre-plan .right-col .payment .btn-list {
+  display: block;
+  width: 100%;
+  height: 23px;
+}
+
+.theatre-plan .right-col .payment .btn-list ul li {
+  list-style: none;
+  float: left;
+  margin-right: 5px;
+}
+
+.theatre-plan .right-col .payment .pay-list {
+  width: 100%;
+  height: 110px;
+  display: block;
+  background-color: white;
+  margin-top: 10px;
+}
+
+.theatre-plan .right-col .payment .pricesum {
+  margin-top: 10px;
+  width: 100%;
+  text-align: left;
+  color: white;
+  font-size: 1.7em;
+  position: relative;
+}
+
+.theatre-plan .right-col .payment .pricesum > div {
+  display: inline;
+}
+
+.theatre-plan .right-col .payment .pricesum > div:last-child {
+  position: absolute;
+  right: 0;
+}
+
+.theatre-plan .right-col .payment .pricesum .price {
+  color: #4D4D4D;
+  position: absolute;
+  right: 60px;
+}
+
+.theatre-plan .right-col .payment .credit {
+  background-color: yellow;
+  color: black;
+  width: 100%;
+  display: block;
+  margin-top: 10px;
+}
+
+.theatre-plan .right-col .payment .credit:hover {
+  background-color: #1949a2;
+  color: white;
+}
+
+.theatre-plan .right-col .payment .cal,
+.theatre-plan .right-col .payment .back {
+  display: inline;
+  float: left;
+  width: 45%;
+  margin-top: 10px;
+}
+
+.theatre-plan .right-col .payment .cal {
+  margin-right: 10%;
+}
+
+.box.gray {
+  background-color: #8C8C8C;
+}
+
+.paymentoption {
+  max-width: 970px;
+  height: 400px !important;
+  min-height: 400px !important;
+}
+
+.paymentoption .panel {
+  width: 970px;
+  height: 400px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  background: #c9c9c9;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #575757), color-stop(100%, #c9c9c9));
+  background: -webkit-linear-gradient(top, #575757 0%, #c9c9c9 100%);
+  background: -webkit-gradient(linear, top left, bottom left, from(#575757), to(#c9c9c9));
+  background: linear-gradient(to bottom, #575757 0%, #c9c9c9 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#575757', endColorstr='#c9c9c9',GradientType=0 );
+}
+
+.paymentoption .panel .seat-summary {
+  position: absolute;
+  left: 210px;
+  top: 13px;
+  color: white;
+  font-size: 1.6em;
+  width: 120px;
+}
+
+.paymentoption .panel .seat-summary div {
+  display: inline;
+  float: right;
+  color: yellow;
+}
+
+.paymentoption .panel .option {
+  width: 435px;
+  position: absolute;
+  right: 10px;
+  top: 13px;
+  color: white;
+  font-size: 1.6em;
+}
+
+.paymentoption .panel .option ul {
+  display: inline;
+  float: right;
+}
+
+.paymentoption .panel .option ul li {
+  list-style: none;
+  float: left;
+  margin-left: 10px;
+}
+
+.paymentoption .panel .option ul li button {
+  margin-top: 0;
+}
+
+.paymentoption .panel .table-frame {
+  width: 100%;
+  height: 260px;
+  margin-top: 20px;
+  position: relative;
+  background-color: white;
+  padding-bottom: 50px;
+}
+
+.paymentoption .panel .table-frame .last-row {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #4D4D4D;
+}
+
+.paymentoption .panel .table-frame table {
+  width: 100%;
+}
+
+.paymentoption .panel .table-frame table tr th {
+  background-color: #B3B3B3;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid black;
+  border-bottom: none;
+  height: 50px;
+}
+
+.paymentoption .panel .table-frame table tr td {
+  border: 1px solid black;
+  border-top: none;
+  height: 50px;
+}
+
+.paymentoption .panel .sum {
+  margin-top: 20px;
+}
+
+.paymentoption .panel .sum ul li {
+  color: #333333;
+  font-size: 1.5em;
+  list-style: none;
+  float: left;
+  margin-right: 10px;
+  line-height: 40px;
+}
+
+.paymentoption .panel .sum ul li .box {
+  background-color: #333333;
+  color: yellow;
+  text-align: right;
+  padding: 5px;
+  font-size: 1.5em;
+  width: 90px;
+  display: inline;
+  float: right;
+  margin-left: 5px;
+  margin-right: 5px;
+  line-height: 30px;
+}
+
+.paymentoption .panel .select {
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+  text-align: left;
+  width: 250px;
+  font-size: 1.6em;
+}
+
+.paymentoption .panel .select input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  margin: 0 !important;
+  display: inline;
+}
+
+.paymentoption .panel .select button {
+  float: right;
+  margin: 0 !important;
+}
+
+body.calculator {
+  width: 400px;
+  height: 608px;
+  min-height: 608px;
+}
+
+body.calculator .panel {
+  width: 400px;
+  height: 608px;
+  background: #c9c9c9;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #575757), color-stop(100%, #c9c9c9));
+  background: -webkit-linear-gradient(top, #575757 0%, #c9c9c9 100%);
+  background: -webkit-gradient(linear, top left, bottom left, from(#575757), to(#c9c9c9));
+  background: linear-gradient(to bottom, #575757 0%, #c9c9c9 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#575757', endColorstr='#c9c9c9',GradientType=0 );
+}
+
+body.calculator .panel .panel-title {
+  text-align: center;
+}
+
+body.calculator .panel .inner {
+  width: 281px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+
+body.calculator .panel .inner ul li {
+  text-align: right;
+  color: white;
+  display: block;
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+
+body.calculator .panel .inner ul li .box {
+  background-color: #333333;
+  color: yellow;
+  width: 160px;
+  min-width: 160px;
+  height: 37px;
+  display: inline-block;
+}
+
+body.calculator .panel .inner ul li .box input[type="text"] {
+  width: 90%;
+  background: none;
+  border: none;
+  margin: 0 !important;
+  margin-left: 5px;
+  margin-top: 5px !important;
+  text-align: right;
+  color: yellow;
+}
+
+body.calculator .panel .inner .cal-btn {
+  margin-top: 20px;
+}
+
+body.calculator .panel .inner .cal-btn .cbtn {
+  width: 65px;
+  height: 65px;
+  background: #d7d6d7;
+  /* Old browsers */
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d7d6d7), color-stop(100%, #797777));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #d7d6d7 0%, #797777 100%);
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+  background: -webkit-gradient(linear, top left, bottom left, from(#d7d6d7), to(#797777));
+  background: linear-gradient(to bottom, #d7d6d7 0%, #797777 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d7d6d7', endColorstr='#797777',GradientType=0 );
+  /* IE6-9 */
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid #666666;
+  display: inline;
+  float: left;
+  margin-top: 5px;
+  margin-left: 5px;
+  color: #333333;
+  font-size: 3.2em;
+  line-height: 120%;
+  text-align: center;
+  cursor: pointer;
+}
+
+body.calculator .panel .inner .cal-btn .cbtn:hover {
+  background: #797777;
+  /* Old browsers */
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #797777), color-stop(100%, #d7d6d7));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #797777 0%, #d7d6d7 100%);
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+  background: -webkit-gradient(linear, top left, bottom left, from(#797777), to(#d7d6d7));
+  background: linear-gradient(to bottom, #797777 0%, #d7d6d7 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#797777', endColorstr='#d7d6d7',GradientType=0 );
+  /* IE6-9 */
+}
+
+body.calculator .panel .inner .cal-btn:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+body.calculator .panel .inner .btn {
+  width: 100%;
+  margin-top: 20px;
+  display: block;
+  clear: both;
+}
+
 /*******input style*******/
+
+input,
+textarea {
+  border-radius: 5px;
+}
+
+.form-control {
+  margin-top: 10px !important;
+}
 
 .btn-primary {
   background: none;
   border: none;
-  background-color: #29ABE2 !important;
+  background-color: #29ABE2;
   /* border-color: #29ABE2 !important; */
 }
