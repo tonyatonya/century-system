@@ -27,17 +27,26 @@
 		<div class="panel-title">ชำระเงิน</div>
 		<div class="btn-list">
 			<ul>
-				<li><a href="#"><img src="images/cal.png" alt="cal" width="23" height="23" /></a></li>
+				<li><a href="#"><img src="images/cal.png" alt="cal" width="23" height="23" onclick="calculate()"/></a></li>
 				<li><a href="#"><img src="images/coins.png" alt="coins" width="23" height="23" /></a></li>
-				<li><a href="#"><img src="images/card.png" alt="card" width="35" height="23" /></a></li>
+				<li><a href="#"><img src="images/card.png" alt="card" width="35" height="23" onclick="discount()" /></a></li>
 			</ul>
 		</div>
 		<div class="pay-list"></div>
 		<div class="pricesum">ส่วนลด <div class="price">0</div><div>บาท</div></div>
 		<div class="pricesum">รวม <div class="price">0</div><div>บาท</div></div>
-		<button class="btn btn-primary credit">ใช้บัตรเครดิต</button>
-		<button class="btn btn-primary cal">คำนวณ</button>
+		<button class="btn btn-primary credit opencard">ใช้บัตรเครดิต</button>
+		<button class="btn btn-primary cal opencal" onclick="calculate()">คำนวณ</button>
 		<button class="btn btn-primary back">ย้อนกลับ</button>
 	</div>
 </div>
-<script type="text/javascript"></script>
+<script type="text/javascript">
+	//$(".opencal")colorbox({iframe:true, width:"80%", height:"80%"});
+	function calculate(){
+		$.colorbox({width:"420", height:"640", iframe:true, scrolling:false, href:"calculator.php"});
+	}
+	function discount(){
+		$.colorbox({width:"985", height:"430", iframe:true,scrolling:false, href:"payment-option.php"});
+		//scrolling:false,
+	}
+</script>

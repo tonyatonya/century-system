@@ -791,6 +791,7 @@ position: absolute;
 
 .paymentoption{
 	max-width: 970px;
+	min-width: 970px;
 	height: 400px !important;
 	min-height:400px !important;
 	.panel{
@@ -918,11 +919,14 @@ position: absolute;
 body.calculator{
 	width: 400px;
 	height: 608px;
+	min-width: 400px; 
 	min-height: 608px;
+	background: none;
 	.panel{
 		width: 400px;
 		height: 608px;
 		@include grayPanel2;
+		margin-bottom: 0 !important;
 		.panel-title{text-align: center;}
 		.inner{
 			width: 281px;
@@ -1011,3 +1015,27 @@ input ,textarea{border-radius: 5px;}
 }
 
 
+
+
+/**************** fix colorbox **************/
+#cboxContent{
+	padding-right: 15px;
+	background: none;
+}
+#cboxLoadedContent{
+	background: none;
+	border:none;
+	
+}
+.cboxIframe{
+	background: none !important;
+}
+#cboxClose{
+	width: 32px;
+	height: 32px;
+	background-image: url(../images/close.png);
+	position: 0 0;
+	z-index: 9999;
+	top:-15px;
+	right: 0px;
+}

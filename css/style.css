@@ -970,6 +970,7 @@ h2 {
 
 .paymentoption {
   max-width: 970px;
+  min-width: 970px;
   height: 400px !important;
   min-height: 400px !important;
 }
@@ -1116,7 +1117,9 @@ h2 {
 body.calculator {
   width: 400px;
   height: 608px;
+  min-width: 400px;
   min-height: 608px;
+  background: none;
 }
 
 body.calculator .panel {
@@ -1128,6 +1131,7 @@ body.calculator .panel {
   background: -webkit-gradient(linear, top left, bottom left, from(#575757), to(#c9c9c9));
   background: linear-gradient(to bottom, #575757 0%, #c9c9c9 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#575757', endColorstr='#c9c9c9',GradientType=0 );
+  margin-bottom: 0 !important;
 }
 
 body.calculator .panel .panel-title {
@@ -1250,4 +1254,30 @@ textarea {
   border: none;
   background-color: #29ABE2;
   /* border-color: #29ABE2 !important; */
+}
+
+/**************** fix colorbox **************/
+
+#cboxContent {
+  padding-right: 15px;
+  background: none;
+}
+
+#cboxLoadedContent {
+  background: none;
+  border: none;
+}
+
+.cboxIframe {
+  background: none !important;
+}
+
+#cboxClose {
+  width: 32px;
+  height: 32px;
+  background-image: url(../images/close.png);
+  position: 0 0;
+  z-index: 9999;
+  top: -15px;
+  right: 0px;
 }
